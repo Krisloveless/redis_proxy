@@ -1,3 +1,7 @@
-SET Key0 Value0
-SET Key1 Value1
-SET KeyN ValueN
+SET A Value0
+SET B Value1
+SET C Value2
+SET D Value3
+SET E Value4
+SET F Value5
+SET G Value6

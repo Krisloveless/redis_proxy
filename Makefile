@@ -5,6 +5,6 @@ install:
 test:
 	pytest test
 deploy:
-	python3 run.py &
 	docker-compose up -d redis
 	docker exec local_redis bash -c "cat redis_data | redis-cli --pipe"
+	python3 run.py &

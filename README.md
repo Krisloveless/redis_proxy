@@ -1,6 +1,6 @@
 # redis_proxy
 
-A proxy example for Redis.
+A proxy for Redis.
 
 ### Test
 
@@ -12,19 +12,28 @@ make test
 
 ```
 make deploy
+# tear down with:   docker-compose down
 ```
 
-#### Starting local Redis server
+You can either use `make deploy` or follow the process below
+
+##### 1. Starting local Redis server
 
 ```
 docker-compose up -d redis
 # tear down with:   docker-compose down
 ```
 
-#### Loading data to Redis
+##### 2. Loading data to Redis
 
 The current test data is placed at `/data/redis_data`.
 
 ```
 docker exec local_redis bash -c "cat redis_data | redis-cli --pipe"
+```
+
+##### 3. Start web server
+
+```
+python3 run.py &
 ```

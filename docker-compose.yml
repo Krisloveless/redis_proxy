@@ -1,12 +1,15 @@
 services:
-  proxy:
-    container_name: local_proxy
-    build:
-      context: .
-    ports:
-      - 5000:5000
-    volumes:
-      - ./:/app
+  # since we are changing IP and host
+  # put this as future improvement
+
+  # proxy:
+  #   container_name: local_proxy
+  #   build:
+  #     context: .
+  #   ports:
+  #     - 5000:5000
+  #   volumes:
+  #     - ./:/app
 
   redis:
     container_name: local_redis
