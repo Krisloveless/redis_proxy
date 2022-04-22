@@ -1,0 +1,21 @@
+services:
+  redis_proxy:
+    build:
+      context: .
+    ports:
+      - 80:5000
+    volumes:
+      - ./:/app
+
+  redis:
+    container_name: local_redis
+    image: redis:7.0-rc3
+    restart: always
+    working_dir: /fake_data
+    volumes:
+      - ./data/:/fake_data
+    ports:
+     - 6379:6379
+    
+
+  
