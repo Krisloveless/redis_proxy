@@ -18,6 +18,7 @@ make deploy
 
 ```
 docker-compose up -d redis
+# tear down with:   docker-compose down
 ```
 
 #### Loading data to Redis

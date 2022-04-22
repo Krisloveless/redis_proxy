@@ -1,5 +1,6 @@
 services:
   proxy:
+    container_name: local_proxy
     build:
       context: .
     ports:
